@@ -9,7 +9,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appRouter = getIt<AppRouter>();
-    
+
     return MaterialApp.router(
       routerConfig: appRouter.config(),
       theme: ThemeData(
