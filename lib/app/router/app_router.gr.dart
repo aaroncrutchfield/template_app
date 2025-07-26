@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -9,21 +10,18 @@
 
 part of 'app_router.dart';
 
-typedef CounterRoute = CounterPageRoute;
-
 /// generated route for
 /// [CounterPage]
-class CounterPageRoute extends PageRouteInfo<void> {
-  const CounterPageRoute({List<PageRouteInfo>? children})
-      : super(
-          CounterPageRoute.name,
-          initialChildren: children,
-        );
+class CounterRoute extends PageRouteInfo<void> {
+  const CounterRoute({List<PageRouteInfo>? children})
+    : super(CounterRoute.name, initialChildren: children);
 
-  static const String name = 'CounterPageRoute';
+  static const String name = 'CounterRoute';
 
   static PageInfo page = PageInfo(
     name,
-    builder: (context) => const CounterPage(),
+    builder: (data) {
+      return const CounterPage();
+    },
   );
 }

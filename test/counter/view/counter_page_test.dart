@@ -5,6 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
 import 'package:template_app/counter/counter.dart';
+import 'package:template_app/injection.dart';
 
 import '../../helpers/helpers.dart';
 
@@ -12,6 +13,11 @@ class MockCounterCubit extends MockCubit<int> implements CounterCubit {}
 
 void main() {
   group('CounterPage', () {
+    setUp(() {
+      getIt.reset();
+      configureDependencies();
+    });
+
     testWidgets('renders CounterView', (tester) async {
       await tester.pumpApp(const CounterPage());
       expect(find.byType(CounterView), findsOneWidget);
